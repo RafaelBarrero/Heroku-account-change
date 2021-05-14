@@ -22,16 +22,10 @@ def main():
 
     i = 0
     while i < 2:
-        if len(sys.argv) > 1 and sys.argv[1].lower() == "alter":
-            if i == 0:
-                email = ALTER
-            else:
-                email = MAIN
+        if i == 0:
+            email = ALTER
         else:
-            if i == 0:
-                email = MAIN
-            else:
-                email = ALTER
+            email = MAIN
 
         driver.get("https://id.heroku.com/login")
 
