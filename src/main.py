@@ -67,7 +67,7 @@ def main():
             if "Confirm" in button.text:
                 button.click()
 
-        time.sleep(0.5)
+        time.sleep(0.8)
 
         # Logout in order to login in the other account
         driver.get("https://dashboard.heroku.com/logout")
