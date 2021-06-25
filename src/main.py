@@ -1,4 +1,3 @@
-import sys
 import time
 
 from config.settings import *
@@ -28,6 +27,13 @@ def main():
             email = MAIN
 
         driver.get("https://id.heroku.com/login")
+
+        # Click cookies. No always
+        try:
+            WebDriverWait(driver, 5)\
+                .until(ec.presence_of_element_located((By.ID, 'onetrust-accept-btn-handler'))).click()
+        except TimeoutException:
+            pass
 
         # Email
         WebDriverWait(driver, 5).until(ec.presence_of_element_located((By.ID, 'email'))).send_keys(email)
