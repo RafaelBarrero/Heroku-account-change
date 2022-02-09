@@ -1,3 +1,4 @@
-python-dotenv==0.15.0
-selenium==3.141.0
-cryptography==3.4.7
+python-dotenv==0.19.2
+selenium==4.1.0
+cryptography==36.0.1
+webdriver-manager==3.5.2
